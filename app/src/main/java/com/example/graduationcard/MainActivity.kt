@@ -29,8 +29,8 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     GreatingText(
                         massage = "Happy Graduation Tino!",
-                        sender = "From Desta",
                         hope = "Semoga Sukses Selalu",
+                        sender = "From Desta",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun GreatingText(massage: String, hope:  String, sender: String,  modifier: Modifier = Modifier){
+fun GreatingText(massage: String, hope:  String, sender: String,  modifier: Modifier = Modifier) {
     Column (verticalArrangement = Arrangement.Center, modifier = Modifier.padding(8.dp).fillMaxSize()) {
         Text(
             text = massage,
