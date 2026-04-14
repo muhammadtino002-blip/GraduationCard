@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -28,7 +29,8 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     GreatingText(
                         massage = "Happy Graduation Tino!",
-                        sender = "From Zaki",
+                        sender = "From Desta",
+                        hope = "Semoga Sukses Selalu",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -38,18 +40,21 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun GreatingText(massage: String, hope = String, sender: String,  modifier: Modifier = Modifier){
+fun GreatingText(massage: String, hope:  String, sender: String,  modifier: Modifier = Modifier){
     Column (verticalArrangement = Arrangement.Center, modifier = Modifier.padding(8.dp).fillMaxSize()) {
         Text(
             text = massage,
             fontSize = 75.sp,
-            lineHeight = 110.sp,
+            lineHeight = 80.sp,
             textAlign = TextAlign.Center
         )
+
         Text(
             text = hope,
-
+            fontSize = 25.sp,
+            modifier = Modifier.padding(all = 16.dp).align(Alignment.CenterHorizontally)
         )
+
         Text(
             text = sender,
             fontSize = 28.sp,
@@ -62,6 +67,6 @@ fun GreatingText(massage: String, hope = String, sender: String,  modifier: Modi
 @Composable
 fun GreetingPreview() {
     GraduationCardTheme {
-        GreatingText("Happy Graduation Tino!", sender = "From Desta")
+        GreatingText("Happy Graduation Tino!", sender = "From Desta", hope = "Semoga Sukses Selalu")
     }
 }
