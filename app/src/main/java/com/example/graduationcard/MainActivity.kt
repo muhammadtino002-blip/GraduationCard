@@ -44,7 +44,7 @@ fun GreatingText(massage: String, hope:  String, sender: String,  modifier: Modi
     Column (verticalArrangement = Arrangement.Center, modifier = Modifier.padding(8.dp).fillMaxSize()) {
         Text(
             text = massage,
-            fontSize = 75.sp,
+            fontSize = 60.sp,
             lineHeight = 80.sp,
             textAlign = TextAlign.Center
         )
